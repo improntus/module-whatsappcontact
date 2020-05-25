@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Improntus <http://www.improntus.com> - Ecommerce done right
+ * @copyright Copyright (c) 2020 Improntus
+ * @package Improntus_WhatsappContact
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <container name="redes.popup" htmlClass="redes" htmlTag="div" before="-">
+            <block class="Improntus\WhatsappContact\Block\WhatsApp" ifconfig="improntus_whatsappcontact/configuration/enable" name="improntus.whatsappcontact" template="Improntus_WhatsappContact::whatsapp.phtml" before="-"/>
+        </container>
+    </body>
+</page>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <improntus_whatsappcontact>
+            <configuration>
+                <active>0</active>
+                <popup_text>Chat with us!</popup_text>
+                <message_text>Hi, I have a question...</message_text>
+            </configuration>
+        </improntus_whatsappcontact>
+    </default>
+</config>

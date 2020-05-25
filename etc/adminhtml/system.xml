@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="improntus_extensions" class="improntus-config-tab" sortOrder="300">
+            <label>Improntus Extensions</label>
+        </tab>
+        <section id="improntus_whatsappcontact" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Whatsapp Contact</label>
+            <tab>improntus_extensions</tab>
+            <resource>Improntus_WhatsappContact::whatsappcontact</resource>
+            <group id="configuration" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+                <label>Whatsapp Contact Configuration</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="popup_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup text</label>
+                    <comment><![CDATA[
+                        Max length 30 characters
+                    ]]></comment>
+                    <validate>validate-length maximum-length-30 required-entry</validate>
+                </field>
+                <field id="message_text" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default text in message</label>
+                    <comment><![CDATA[
+                        Max length 30 characters
+                    ]]></comment>
+                    <validate>validate-length maximum-length-30 required-entry</validate>
+                </field>
+                <field id="contry_code" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Country code (phone)</label>
+                    <comment>Example: +549</comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="number" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Phone number</label>
+                    <comment><![CDATA[
+                        Only numbers. Example: 1155767876
+                    ]]></comment>
+                    <validate>validate-number maximum-number-15 required-entry</validate>
+                </field>
+                <field id="position" translate="label" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup position</label>
+                    <source_model>Improntus\WhatsappContact\Model\Config\Source\Position</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

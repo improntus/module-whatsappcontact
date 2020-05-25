@@ -1,0 +1,30 @@
+.admin__menu #menu-improntus-core-menuprincipal > a:before  {
+    opacity: 0.65;
+    content: '';
+    font-size: 2.4rem;
+    display: block;
+    position: relative;
+    top: -0.3rem;
+    width: 35px;
+    height: 32px;
+    background: url('../images/logo_improntus.svg');
+    background-size: 33px 33px;
+    margin: 0 auto;
+}
+
+.admin__menu #menu-improntus-core-menuprincipal:hover > a:before {
+    opacity: 1;
+}
+
+.improntus-config-tab .admin__page-nav-title{
+    background-image: url('../images/logo_transparent.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: 120px !important;
+    background-position: left!important;
+    padding: 25px !important;
+    background-position-x: 10px !important;
+}
+
+.improntus-config-tab .admin__page-nav-title strong {
+    display: none!important;
+}
