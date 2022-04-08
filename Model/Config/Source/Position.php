@@ -8,7 +8,7 @@ namespace Improntus\WhatsappContact\Model\Config\Source;
  * @copyright Copyright (c) 2020 Improntus
  * @package Improntus\WhatsappContact\Model\Config\Source
  */
-class Position implements \Magento\Framework\Option\ArrayInterface
+class Position implements \Magento\Framework\Data\OptionSourceInterface
 {
     /**
      * @return array

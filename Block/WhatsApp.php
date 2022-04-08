@@ -51,7 +51,6 @@ class WhatsApp extends Template
         return $this->_helper->getNumber();
     }
 
-
     /**
      * @return string
      */
