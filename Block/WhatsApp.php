@@ -9,8 +9,7 @@ use Improntus\WhatsappContact\Helper\Data;
  * Class Redes
  *
  * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2020 Improntus
- * @package Improntus\WhatsappContact\Block
+ * @copyright Copyright (c) 2022 Improntus
  */
 class WhatsApp extends Template
 {

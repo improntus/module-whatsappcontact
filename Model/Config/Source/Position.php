@@ -5,15 +5,15 @@ namespace Improntus\WhatsappContact\Model\Config\Source;
  * Class Position
  *
  * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2020 Improntus
- * @package Improntus\WhatsappContact\Model\Config\Source
+ * @copyright Copyright (c) 2022 Improntus
  */
 class Position implements \Magento\Framework\Data\OptionSourceInterface
 {
     /**
+     * Options to select
      * @return array
      */
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
         return [
             ['value' => 'bottom-right', 'label' => __('Bottom - Right')],

@@ -1,4 +1,9 @@
-<?php /** @var \Improntus\WhatsappContact\Block\WhatsApp $block */ ?>
+<?php
+/**
+ * @var \Improntus\WhatsappContact\Block\WhatsApp $block
+ * @var $escaper \Magento\Framework\Escaper
+ */
+?>
 <style>
     /*=========================================
     ESTILOS PARA POPUPREDES ESCRITORIO
@@ -110,7 +115,8 @@
     .bottom-right #mensaje-popup:before{
         z-index: 2;
     }
-    .bottom-right #mensaje-popup:before, .bottom-right #mensaje-popup:after,.top-right #mensaje-popup:before, .top-right #mensaje-popup:after{
+    .bottom-right #mensaje-popup:before, .bottom-right #mensaje-popup:after,.top-right #mensaje-popup:before,
+    .top-right #mensaje-popup:after{
         content: '';
         position: absolute;
         background: white;
@@ -128,7 +134,8 @@
         -o-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
-    .bottom-left #mensaje-popup:before, .bottom-left #mensaje-popup:after,.top-left #mensaje-popup:before, .top-left #mensaje-popup:after{
+    .bottom-left #mensaje-popup:before, .bottom-left #mensaje-popup:after,.top-left #mensaje-popup:before,
+    .top-left #mensaje-popup:after{
          content: '';
          position: absolute;
          background: white;
@@ -179,10 +186,12 @@
     div.redes div.btn-red>a.icono-red div.btn-icono.bg-whatsapp{
         background-color: #4dc247;
     }
-    div.redes.bottom-right div.btn-red>a.icono-red div.btn-icono,div.redes.top-right div.btn-red>a.icono-red div.btn-icono{
+    div.redes.bottom-right div.btn-red>a.icono-red div.btn-icono,div.redes.top-right div.btn-red >
+    a.icono-red div.btn-icono{
         float: right;
     }
-    div.redes.bottom-left div.btn-red>a.icono-red div.btn-icono,div.redes.top-left div.btn-red>a.icono-red div.btn-icono{
+    div.redes.bottom-left div.btn-red>a.icono-red div.btn-icono,div.redes.top-left div.btn-red >
+    a.icono-red div.btn-icono{
         float: left;
     }
     div.redes div.btn-red>a.icono-red div.btn-icono{
@@ -246,15 +255,17 @@
     }
 </style>
 
-<div id="contendedor-redes" class="contenedor_redes <?php echo $block->getPosition()?>">
+<div id="contendedor-redes" class="contenedor_redes <?= $escaper->escapeHtml($block->getPosition())?>">
     <div id="popup-placement" class="popup-slide"></div>
     <div id="mensaje-popup" class=""  style="top: 29px;">
         <a  href="#">
-            <div class="contenido-popup"><?= $block->getPopUpText() ?></div>
+            <div class="contenido-popup"><?= $escaper->escapeHtml($block->getPopUpText()) ?></div>
         </a>
     </div>
     <div id="btn-red" class="btn-red">
-        <a class=" icono-red icono-red-activo" href="https://api.whatsapp.com/send?phone=<?= $block->getCountryCode() . $block->getNumber();?>&text=<?php echo($block->getMessageText()!='')? $block->getMessageText() : ''?>">
+        <a class=" icono-red icono-red-activo" href="https://api.whatsapp.com/send?phone=<?= $escaper->escapeHtml(
+            $block->getCountryCode() . $block->getNumber());?>&text=<?= ($block->getMessageText()!='') ?
+            $escaper->escapeHtml($block->getMessageText()) : ''?>">
             <div class=" btn-icono bg-whatsapp">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -269,12 +280,12 @@
     <div class=" clear"></div>
 </div>
 
-<script type="text/javascript">
+<script>
     require([
         'jquery'
     ], function ($) {
         $(document).ready(function () {
-            var ubicacion = "<?php echo $block->getPosition() ?>";
+            var ubicacion = "<?= $block->getPosition() ?>";
 
             $('.redes').addClass(ubicacion);
             $('#mensaje-popup').addClass('animacion-popup-in');
