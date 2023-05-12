@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @author Improntus Dev Team
+ * @copyright Copyright (c) 2023 Improntus (http://www.improntus.com/)
+ */
 namespace Improntus\WhatsappContact\Block;
 
 use Magento\Framework\View\Element\Template;
@@ -19,15 +22,14 @@ class WhatsApp extends Template
     protected $_helper;
 
     /**
-     * WhatsApp constructor.
      * @param Template\Context $context
-     * @param array $data
      * @param Data $helper
+     * @param array $data
      */
     public function __construct(
         Template\Context $context,
-        array $data = [],
-        Data $helper
+        Data $helper,
+        array $data = []
     )
     {
         $this->_helper = $helper;
