@@ -1,6 +1,6 @@
-# Módulo WhatsappContact
+# Module WhatsappContact
 
-### Instalación
+### Installation steps
 #### Developer mode
 ```sh
 composer require improntus/module-whatsappcontact
@@ -18,9 +18,12 @@ php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
 
-### Configuraciones
+### Features and user manual
 
-### Funcionamiento
+Please refer to the [Adobe Commerce Marketplace](https://commercemarketplace.adobe.com/improntus-whatsappcontact.html) to get the user manual and available features.
+
+If this module was helpful, we really appreciate you leaving us your review on the [Adobe Commerce Marketplace](https://commercemarketplace.adobe.com/improntus-whatsappcontact.html) ♡♡
+
 
 ## Author
 
