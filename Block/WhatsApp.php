@@ -12,7 +12,7 @@ use Improntus\WhatsappContact\Helper\Data;
  * Class Redes
  *
  * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2022 Improntus
+ * @copyright Copyright (c) 2024 Improntus
  */
 class WhatsApp extends Template
 {

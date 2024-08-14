@@ -13,7 +13,7 @@ use Magento\Store\Model\ScopeInterface;
  * Class Data
  *
  * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2022 Improntus
+ * @copyright Copyright (c) 2024 Improntus
  */
 class Data extends AbstractHelper
 {
