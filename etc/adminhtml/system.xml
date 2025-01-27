@@ -6,14 +6,14 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="improntus_extensions" class="improntus-config-tab" sortOrder="300">
+        <tab id="improntus_extensions" class="improntus" sortOrder="300">
             <label>Improntus Extensions</label>
         </tab>
         <section id="improntus_whatsappcontact" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Whatsapp Contact</label>
             <tab>improntus_extensions</tab>
-            <resource>Improntus_WhatsappContact::whatsappcontact</resource>
+            <resource>Improntus_WhatsappContact::WhatsappContact</resource>
             <group id="configuration" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
                 <label>Whatsapp Contact Configuration</label>
                 <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">

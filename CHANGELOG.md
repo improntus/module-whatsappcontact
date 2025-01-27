@@ -1,6 +1,11 @@
 CHANGELOG
 ---------
 
+### 1.0.4 (2024-01-27)
+* Refactored styles for the admin.
+* Added improntus logo to menu in Store Configuration
+* Added setting link to Improntus extension sidebar menu
+
 ### 1.0.3 (2024-08-28)
 
 * Updated composer.json
