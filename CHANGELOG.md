@@ -1,6 +1,9 @@
 CHANGELOG
 ---------
 
+### 1.0.5 (2024-02-03)
+* Require the module improntus/module-core.
+
 ### 1.0.4 (2024-01-27)
 * Refactored styles for the admin.
 * Added improntus logo to menu in Store Configuration
