@@ -1,6 +1,9 @@
 CHANGELOG
 ---------
 
+### 1.0.6 (2024-04-24)
+* Remove require Default text in message field
+* 
 ### 1.0.5 (2024-02-03)
 * Require the module improntus/module-core.
 
