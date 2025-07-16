@@ -5,7 +5,7 @@
   -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="improntus_extensions" class="improntus" sortOrder="300">
+        <tab id="improntus_extensions" class="improntus improntus-config-tab" sortOrder="300">
             <label>Improntus Extensions</label>
         </tab>
         <section id="improntus_whatsappcontact" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">

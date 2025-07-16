@@ -1,9 +1,12 @@
 CHANGELOG
 ---------
 
+### 1.0.7 (2025-07-16)
+* Compatibility with Adobe Commerce and Magento Open Source 2.4.8-p1
+
 ### 1.0.6 (2024-04-24)
-* Remove require Default text in message field
-* 
+* Removed require Default text in message field
+
 ### 1.0.5 (2024-02-03)
 * Require the module improntus/module-core.
 

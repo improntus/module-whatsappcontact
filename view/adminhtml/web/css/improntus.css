@@ -13,7 +13,7 @@
 }
 
 li.whatsapp-menu .item-nav{
-    background-image: url(../images/WhatsApp.svg) !important;
+    background-image: url('../images/WhatsApp.svg') !important;
     background-repeat: no-repeat !important;
     background-size: 40px !important;
     background-position: right !important;

@@ -6,6 +6,6 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Improntus_Core::css/improntus.css"/>
+        <css src="Improntus_WhatsappContact::css/improntus.css"/>
     </head>
 </page>
