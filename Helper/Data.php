@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Improntus Dev Team
- * @copyright Copyright (c) 2024 Improntus (http://www.improntus.com/)
+ * @copyright Copyright (c) 2025 Improntus (http://www.improntus.com/)
  */
 namespace Improntus\WhatsappContact\Helper;
 
@@ -12,8 +12,8 @@ use Magento\Store\Model\ScopeInterface;
 /**
  * Class Data
  *
- * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2024 Improntus
+ * @author Improntus <http://www.improntus.com> - Adobe Gold Partner - Elevating digital experience
+ * @copyright Copyright (c) 2025 Improntus
  */
 class Data extends AbstractHelper
 {

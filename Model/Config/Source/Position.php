@@ -1,15 +1,11 @@
 <?php
-/**
- * @author Improntus Dev Team
- * @copyright Copyright (c) 2024 Improntus (http://www.improntus.com/)
- */
 namespace Improntus\WhatsappContact\Model\Config\Source;
 
 /**
  * Class Position
  *
- * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2024 Improntus
+ * @author Improntus <http://www.improntus.com> - Adobe Gold Partner - Elevating digital experience
+ * @copyright Copyright (c) 2025 Improntus
  */
 class Position implements \Magento\Framework\Data\OptionSourceInterface
 {

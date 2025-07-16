@@ -1,8 +1,6 @@
 <?php
-/**
- * @author Improntus Dev Team
- * @copyright Copyright (c) 2024 Improntus (http://www.improntus.com/)
- */
+declare(strict_types=1);
+
 namespace Improntus\WhatsappContact\Block;
 
 use Magento\Framework\View\Element\Template;
@@ -11,8 +9,8 @@ use Improntus\WhatsappContact\Helper\Data;
 /**
  * Class Redes
  *
- * @author Improntus <http://www.improntus.com> - Ecommerce done right
- * @copyright Copyright (c) 2024 Improntus
+ * @author Improntus <http://www.improntus.com> - Adobe Gold Partner - Elevating digital experience
+ * @copyright Copyright (c) 2025 Improntus
  */
 class WhatsApp extends Template
 {

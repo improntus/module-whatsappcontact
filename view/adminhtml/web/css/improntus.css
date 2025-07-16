@@ -1,34 +1,22 @@
-/**
- * @author Improntus Dev Team
- * @copyright Copyright (c) 2024 Improntus (http://www.improntus.com/)
- */
-.admin__menu #menu-improntus-core-menuprincipal > a:before  {
-    opacity: 0.65;
-    content: '';
-    font-size: 2.4rem;
-    display: block;
-    position: relative;
-    top: -0.3rem;
-    width: 35px;
-    height: 32px;
-    background: url('../images/logo_improntus.svg');
-    background-size: 33px 33px;
-    margin: 0 auto;
-}
-
-.admin__menu #menu-improntus-core-menuprincipal:hover > a:before {
-    opacity: 1;
-}
-
 .improntus-config-tab .admin__page-nav-title{
-    background-image: url('../images/logo_transparent.png') !important;
+    background-image: url('../images/Improntus-logo-2.webp') !important;
     background-repeat: no-repeat !important;
     background-size: 120px !important;
     background-position: left!important;
     padding: 25px !important;
     background-position-x: 10px !important;
+    background-blend-mode: difference;
 }
 
 .improntus-config-tab .admin__page-nav-title strong {
     display: none!important;
+}
+
+li.whatsapp-menu .item-nav{
+    background-image: url(../images/WhatsApp.svg) !important;
+    background-repeat: no-repeat !important;
+    background-size: 40px !important;
+    background-position: right !important;
+    background-position-x: 10px !important;
+    padding-left: 55px;
 }
