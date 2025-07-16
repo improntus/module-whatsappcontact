@@ -2,7 +2,7 @@
   "name": "improntus/module-whatsappcontact",
   "description": "WhatsApp Contact Integration",
   "type": "magento2-module",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "require": {
   },
   "autoload": {
