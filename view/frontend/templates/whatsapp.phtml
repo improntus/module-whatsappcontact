@@ -1,27 +1,30 @@
 <?php
 /**
  * @author Improntus Dev Team
- * @copyright Copyright (c) 2025 Improntus (http://www.improntus.com/)
+ * @copyright Copyright (c) 2026 Improntus (http://www.improntus.com/)
  */
 
 /**
  * @var \Improntus\WhatsappContact\Block\WhatsApp $block
- * @var $escaper \Magento\Framework\Escaper
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
  */
+$position = $block->getPosition();
 ?>
 
-<div id="contendedor-redes" class="contenedor_redes <?= $escaper->escapeHtml($block->getPosition())?>">
+<div id="contendedor-redes" class="contenedor_redes <?= $escaper->escapeHtmlAttr($position) ?>">
     <div id="popup-placement" class="popup-slide"></div>
-    <div id="mensaje-popup" class=""  style="top: 29px;">
-        <a  href="#">
+    <div id="mensaje-popup" class="">
+        <a href="#">
             <div class="contenido-popup"><?= $escaper->escapeHtml($block->getPopUpText()) ?></div>
         </a>
     </div>
     <div id="btn-red" class="btn-red">
-        <a class=" icono-red icono-red-activo" href="https://api.whatsapp.com/send?phone=<?= $escaper->escapeHtml(
-            $block->getCountryCode() . $block->getNumber());?>&text=<?= ($block->getMessageText()!='') ?
-            $escaper->escapeHtml($block->getMessageText()) : ''?>">
-            <div class=" btn-icono bg-whatsapp">
+        <a class="icono-red icono-red-activo"
+           target="_blank"
+           rel="noopener noreferrer"
+           href="<?= $escaper->escapeUrl($block->getWhatsappUrl()) ?>">
+            <div class="btn-icono bg-whatsapp">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          viewBox="0 0 32 32" class="svg-whatsapp svg-icon">
@@ -32,24 +35,29 @@
             </div>
         </a>
     </div>
-    <div class=" clear"></div>
+    <div class="clear"></div>
 </div>
 
-<script>
-    require([
-        'jquery'
-    ], function ($) {
-        $(document).ready(function () {
-            var ubicacion = "<?= $escaper->escapeHtml($block->getPosition()) ?>";
+<?php
+$positionJson = json_encode($position);
+$script = <<<SCRIPT
+require(['jquery'], function ($) {
+    'use strict';
 
-            $('.redes').addClass(ubicacion);
-            $('#mensaje-popup').addClass('animacion-popup-in');
-            $('.btn-red').mouseenter(function () {
-                $('#mensaje-popup').removeClass('animacion-popup-in');
-                $('#mensaje-popup').addClass('animacion-popup-out');
-                $('#mensaje-popup').addClass('mensaje-hide');
-            })
+    $(function () {
+        var position = {$positionJson},
+            \$message = $('#mensaje-popup');
+
+        $('.redes').addClass(position);
+        \$message.addClass('animacion-popup-in');
+
+        $('.btn-red').on('mouseenter', function () {
+            \$message
+                .removeClass('animacion-popup-in')
+                .addClass('animacion-popup-out mensaje-hide');
         });
-
     });
-</script>
+});
+SCRIPT;
+?>
+<?= /* @noEscape */ $secureRenderer->renderTag('script', [], $script, false) ?>

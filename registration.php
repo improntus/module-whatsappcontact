@@ -1,10 +1,10 @@
 <?php
 /**
  * @author Improntus Dev Team
- * @copyright Copyright (c) 2025 Improntus (http://www.improntus.com/)
+ * @copyright Copyright (c) 2026 Improntus (http://www.improntus.com/)
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-        'Improntus_WhatsappContact',
+    'Improntus_WhatsappContact',
     __DIR__
 );
