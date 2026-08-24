@@ -8,6 +8,7 @@ declare(strict_types=1);
 namespace Improntus\WhatsappContact\Block;
 
 use Improntus\WhatsappContact\Helper\Data;
+use Magento\Framework\View\Asset\Repository as AssetRepository;
 use Magento\Framework\View\Element\Template;
 
 /**
@@ -18,23 +19,49 @@ use Magento\Framework\View\Element\Template;
  */
 class WhatsApp extends Template
 {
+    private const ICON_SVG_ASSET = 'Improntus_WhatsappContact::images/whatsapp_icon.svg';
+
     /**
      * @var Data
      */
     protected $_helper;
 
     /**
+     * @var AssetRepository
+     */
+    private $assetRepository;
+
+    /**
      * @param Template\Context $context
      * @param Data $helper
+     * @param AssetRepository $assetRepository
      * @param array $data
      */
     public function __construct(
         Template\Context $context,
         Data $helper,
+        AssetRepository $assetRepository,
         array $data = []
     ) {
         $this->_helper = $helper;
+        $this->assetRepository = $assetRepository;
         parent::__construct($context, $data);
+    }
+
+    /**
+     * Retrieve the inline markup of the Whatsapp SVG icon.
+     *
+     * @return string
+     */
+    public function getWhatsappIconSvg(): string
+    {
+        $sourceFile = $this->assetRepository->createAsset(self::ICON_SVG_ASSET)->getSourceFile();
+
+        if ($sourceFile === false || !is_readable($sourceFile)) {
+            return '';
+        }
+
+        return (string)file_get_contents($sourceFile);
     }
 
     /**

@@ -1,6 +1,13 @@
 CHANGELOG
 ---------
 
+### 1.0.9 (2026-08-24)
+* Replaced the empty WhatsApp icon placeholder with the brand SVG rendered inline, so the floating button icon shows again.
+* Refactored `_module.less`: namespaced the LESS variables (`@whatsapp-widget__*`) to avoid colliding with other modules/themes, dropped obsolete vendor prefixes, extracted the popup speech-bubble arrow into a reusable mixin, and replaced the empty `@media` placeholders with Magento's native `.media-width()` mixin.
+* Removed the popup "call to action" animation, which referenced a `@keyframes` that did not exist and never had a visible effect, along with the now-unused JS class toggling in the template.
+* Fixed the floating button positioning at the top-right/top-left corners.
+* Cleaned up `view/adminhtml`: moved the extension credits row's inline styles into `improntus.css`, modernized `Version.php` (typed, promoted, readonly constructor properties), and removed unused/duplicate admin assets (`logo_improntus.svg`, `brand_logo.svg`).
+
 ### 1.0.8 (2026-08-24)
 * Compatibility with Adobe Commerce and Magento Open Source 2.4.9
 * Replaced the inline `<script>` of the storefront template with `SecureHtmlRenderer` (Content Security Policy compliance).

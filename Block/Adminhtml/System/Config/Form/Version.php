@@ -16,7 +16,7 @@ use Magento\Framework\View\Asset\Repository;
 /**
  * Renders the extension credits row on top of the Whatsapp Contact configuration section.
  *
- * @author Improntus <https://www.improntus.com> - Elevating Digital Experience | Adobe Gold Solution Partner
+ * @author Improntus <https://www.improntus.com> - Elevating Digital Experience | Adobe Gold Partner
  * @copyright Copyright (c) 2026 Improntus
  */
 class Version extends Field
@@ -24,30 +24,17 @@ class Version extends Field
     private const MODULE_NAME = 'Improntus_WhatsappContact';
 
     /**
-     * @var ModuleListInterface
-     */
-    protected $_moduleList;
-
-    /**
-     * @var Repository
-     */
-    private $_repo;
-
-    /**
      * @param Context $context
      * @param ModuleListInterface $moduleList
-     * @param Repository $repository
+     * @param Repository $assetRepository
      * @param array $data
      */
     public function __construct(
         Context $context,
-        ModuleListInterface $moduleList,
-        Repository $repository,
+        private readonly ModuleListInterface $moduleList,
+        private readonly Repository $assetRepository,
         array $data = []
     ) {
-        $this->_moduleList = $moduleList;
-        $this->_repo = $repository;
-
         parent::__construct($context, $data);
     }
 
@@ -76,8 +63,8 @@ class Version extends Field
         $adobeSilverTechPartnerImage = $this->getAssetUrl('images/Adobe_Technology_Partner_badge_Silver.png');
 
         return '<tr>
-            <td class="label" colspan="4" style="text-align: left;">
-                <div style="padding:10px;background-color:#f8f8f8;border:1px solid #ddd;margin-bottom:7px;">
+            <td class="label improntus-version-cell" colspan="4">
+                <div class="improntus-version-row">
                     <a href="https://commercemarketplace.adobe.com/improntus-whatsappcontact.html">
                         Free Whatsapp Contact
                     </a> integration. <strong>Version</strong>:
@@ -85,22 +72,17 @@ class Version extends Field
                     <br>
                     <br>
                     <a href="https://improntus.com/">
-                        <img src="' . $logoImage . '" alt="Improntus" width="170px">
+                        <img src="' . $logoImage . '" alt="Improntus" class="improntus-logo">
                     </a>
                     <a href="https://partners.adobe.com/s/directory/solution/improntus#expertise">
-                        <img src="' . $adobeGoldPartnerImage . '" alt="Adobe Gold Solution Partner" style="
-                            width: 170px;
-                            filter: invert(1);
-                            margin-left: 30px;">
+                        <img src="' . $adobeGoldPartnerImage . '" alt="Adobe Gold Solution Partner" class="partner-badge partner-badge--gold">
                     </a>
                     <a href="https://partners.adobe.com/s/directory/technology/Improntus">
-                        <img src="' . $adobeSilverTechPartnerImage . '" alt="Adobe Silver Technology Partner" style="
-                            width: 145px;
-                            margin-left: 30px;">
+                        <img src="' . $adobeSilverTechPartnerImage . '" alt="Adobe Silver Technology Partner" class="partner-badge partner-badge--silver">
                     </a>
                 </div>
-                </td>
-            </tr>';
+            </td>
+        </tr>';
     }
 
     /**
@@ -110,7 +92,7 @@ class Version extends Field
      */
     public function getVersion(): string
     {
-        $module = $this->_moduleList->getOne(self::MODULE_NAME);
+        $module = $this->moduleList->getOne(self::MODULE_NAME);
 
         return (string)($module['setup_version'] ?? '');
     }
@@ -123,6 +105,6 @@ class Version extends Field
      */
     private function getAssetUrl(string $path): string
     {
-        return $this->escapeUrl($this->_repo->createAsset(self::MODULE_NAME . '::' . $path)->getUrl());
+        return $this->escapeUrl($this->assetRepository->createAsset(self::MODULE_NAME . '::' . $path)->getUrl());
     }
 }

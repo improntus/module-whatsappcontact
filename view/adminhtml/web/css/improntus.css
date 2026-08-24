@@ -20,3 +20,32 @@ li.whatsapp-menu .item-nav{
     background-position-x: 10px !important;
     padding-left: 55px;
 }
+
+/* Version.php credits row (Block/Adminhtml/System/Config/Form/Version.php) */
+.improntus-version-cell {
+    text-align: left;
+}
+
+.improntus-version-row {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    margin-bottom: 7px;
+}
+
+.improntus-version-row .improntus-logo {
+    width: 170px;
+}
+
+.improntus-version-row .partner-badge {
+    margin-left: 30px;
+}
+
+.improntus-version-row .partner-badge--gold {
+    width: 170px;
+    filter: invert(1);
+}
+
+.improntus-version-row .partner-badge--silver {
+    width: 145px;
+}
